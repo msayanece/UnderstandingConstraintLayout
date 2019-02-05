@@ -12,9 +12,19 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
-        android:text="Name : "
+        android:text="Name desc asdasdasdasdasdasd"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/colonTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:text=":"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/nameTextView" />
 
     <TextView
         android:id="@+id/valueTextView"
@@ -22,20 +32,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="12dp"
-        android:text="Sayan Mukherjee"
+        android:text="Sayan Mukherjee "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/barrier"
-        app:layout_constraintTop_toTopOf="@+id/nameTextView" />
+        app:layout_constraintStart_toEndOf="@+id/colonTextView"
+        app:layout_constraintTop_toTopOf="@+id/colonTextView" />
 
     <TextView
         android:id="@+id/ageTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="end"
         android:layout_marginTop="12dp"
-        android:text="Age : "
+        android:gravity="end"
+        android:text="Age"
         app:layout_constraintStart_toStartOf="@id/nameTextView"
-        app:layout_constraintTop_toBottomOf="@id/nameTextView" />
+        app:layout_constraintTop_toBottomOf="@id/valueTextView" />
+
+    <TextView
+        android:id="@+id/ageColonTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:text=":"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/ageTextView" />
 
     <TextView
         android:id="@+id/ageValueTextView"
@@ -43,20 +63,30 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="12dp"
-        android:text="45"
+        android:text="455646464 6464464646464464644643644643 4643245441346413415641654434641641244544216143464346464646464464646464646464646464643431616163434646631313"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/barrier"
-        app:layout_constraintTop_toTopOf="@+id/ageTextView" />
+        app:layout_constraintStart_toEndOf="@+id/ageColonTextView"
+        app:layout_constraintTop_toTopOf="@+id/ageColonTextView" />
 
     <TextView
         android:id="@+id/sexTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:gravity="end"
         android:layout_marginTop="12dp"
-        android:text="Gender : "
+        android:gravity="end"
+        android:text="Gender"
         app:layout_constraintStart_toStartOf="@id/nameTextView"
-        app:layout_constraintTop_toBottomOf="@id/ageTextView" />
+        app:layout_constraintTop_toBottomOf="@id/ageValueTextView" />
+
+    <TextView
+        android:id="@+id/sexColonTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="2dp"
+        android:text=":"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/sexTextView" />
 
     <TextView
         android:id="@+id/sexValueTextView"
@@ -64,10 +94,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="12dp"
-        android:text="45"
+        android:text="Male"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/barrier"
-        app:layout_constraintTop_toTopOf="@+id/ageTextView" />
+        app:layout_constraintStart_toEndOf="@+id/sexColonTextView"
+        app:layout_constraintTop_toTopOf="@+id/sexColonTextView" />
 
     <android.support.constraint.Barrier
         android:id="@+id/barrier"
@@ -75,7 +105,119 @@
         android:layout_height="wrap_content"
         app:barrierDirection="end"
         app:constraint_referenced_ids="nameTextView,sexTextView,ageTextView"
-        tools:layout_editor_absoluteX="411dp" />
+        tools:layout_editor_absoluteX="410dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sexValueTextView"
+        app:layout_constraintVertical_bias="50"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <ImageView
+        android:id="@+id/imageViewButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.988"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_constraintCircle="@id/floatingActionButton"
+        app:layout_constraintCircleAngle="0"
+        app:layout_constraintCircleRadius="80dp"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_constraintCircle="@id/floatingActionButton"
+        app:layout_constraintCircleAngle="270"
+        app:layout_constraintCircleRadius="80dp"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:clickable="true"
+        app:fabSize="mini"
+        app:layout_constraintCircle="@id/floatingActionButton"
+        app:layout_constraintCircleAngle="315"
+        app:layout_constraintCircleRadius="80dp"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <android.support.constraint.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="colonTextView,valueTextView,nameTextView" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imageViewButton"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintTop_toTopOf="@id/button"
+        app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintTop_toTopOf="@id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        />
 
 
 </android.support.constraint.ConstraintLayout>
